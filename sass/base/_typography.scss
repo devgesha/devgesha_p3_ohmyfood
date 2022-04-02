@@ -1,0 +1,25 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    a{
+        color: $colour-black;
+    }
+}
+.rest__name {
+    font-family: 'Shrikhand';
+    font-size: 20px;
+}
+footer{
+    color: $colour-white;
+    .footer__name  {
+        font-family: 'Shrikhand';
+        font-size: 20px;
+    }
+    a {
+        color: $colour-white;
+    }
+}
+
+a {
+    text-decoration: none;
+}
