@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet">
+    <link rel="stylesheet" href="public/css/normalize.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Shrikhand&display=swap');
     </style>
@@ -15,92 +15,113 @@
 
 <body>
     
-    <header>
-        <div class="head__btn__return">
+    <header class="header">
+        <div class="header__btn__return">
             <a href="index.html" title="Retour Accueil">
                 <i class="fa-solid fa-arrow-left"></i>
             </a>
         </div>
-        <div class="head__logo">
+        <div class="header__logo">
             <img src="images/logo/ohmyfood.png" alt="ohmyfood">
         </div>
     </header>
 
     <main>
-        <div class="rest__photo">
-            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
-        </div>
-
-
-        <section class="restaurant__main">
+        <div class="rest__home">
+            <div class="rest__photo">
+                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="Le délice des sens">
+            </div>
             <div class="rest__name">
                 <h1>Le délice des sens</h1>
                 <i class="fa-regular fa-heart"></i>
             </div>
+        </div>
+
+
+        <section class="rest__main">
+
             <div class="rest__menu">
 
                 <div class="rest__menu__entrees">
-                    <h2>Entrées</h2>
+                    <h2>ENTRÉES</h2>
 
                     <div class="dishe">
-                        <div class="dishe__name">Tartare de thon</div>
-                        <div class="dishe__info">Assaisonné au yuzu</div>
+                        <div class="dishe__name">
+                            <h3>Tartare de thon</h3>
+                            <div class="dishe__info">Assaisonné au yuzu</div>
+                        </div>
                         <div class="dishe__price"><strong>25€</strong></div>
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Bouchée de homard croustillant</div>
-                        <div class="dishe__info">Et sa farandole de petits légumes</div>
+                        <div class="dishe__name">
+                            <h3>Bouchée de homard croustillant</h3>
+                            <div class="dishe__info">Et sa farandole de petits légumes</div>
+                        </div>
                         <div class="dishe__price"><strong>35€</strong></div>
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Velouté de cèpes</div>
-                        <div class="dishe__info">Aux truffes</div>
+                        <div class="dishe__name">
+                            <h3>Velouté de cèpe</h3>
+                            <div class="dishe__info">Aux truffes</div>
+                        </div>
                         <div class="dishe__price"><strong>20€</strong></div>
                     </div>
                 </div>
 
                 <div class="rest__menu__dishes">
-                    <h2>Plats</h2>
+                    <h2>PLATS</h2>
 
                     <div class="dishe">
-                        <div class="dishe__name">Poulet rôti aux herbes de Provence</div>
-                        <div class="dishe__info">Et sa crème de truffe</div>
+                        <div class="dishe__name">
+                            <h3>Poulet rôti aux herbes de Provence</h3>
+                            <div class="dishe__info">Et sa crème de truffe</div>
+                        </div>
                         <div class="dishe__price"><strong>40€</strong></div>
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Langouste rôtie</div>
-                        <div class="dishe__info">Et ses légumes de saison</div>
+                        <div class="dishe__name">
+                            <h3>Langouste rôtie</h3>
+                            <div class="dishe__info">Et ses légumes de saison</div>
+                        </div>
                         <div class="dishe__price"><strong>35€</strong></div>
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Côte de boeuf Angus</div>
-                        <div class="dishe__info">Et sa purée de panais</div>
+                        <div class="dishe__name">
+                            <h3>Côte de boeuf Angus</h3>
+                            <div class="dishe__info">Et sa purée de panais</div>
+                        </div>
                         <div class="dishe__price"><strong>44€</strong></div>
                     </div>
                 </div>
 
                 <div class="rest__menu__desserts">
-                    <h2>Desserts</h2>
+                    <h2>DESSERTS</h2>
 
                     <div class="dishe">
-                        <div class="dishe__name">Farandole de desserts</div>
-                        <div class="dishe__info">Du chef</div>
+                        <div class="dishe__name">
+                            <h3>Farandole de desserts</h3>
+                            <div class="dishe__info">Du chef</div>
+                        </div>
                         <div class="dishe__price"><strong>18€</strong></div>
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Crème brulée</div>
-                        <div class="dishe__info">Revisitée</div>
+                        <div class="dishe__name">
+                            <h3>Crème brulée</h3>
+                            <div class="dishe__info">Revisitée</div>
+                        </div>
                         <div class="dishe__price"><strong>22€</strong></div> 
                     </div>
 
                     <div class="dishe">
-                        <div class="dishe__name">Tiramisu</div>
-                        <div class="dishe__info">À la noisette</div>
+                        <div class="dishe__name">
+                            <h3>Tiramisu</h3>
+                            <div class="dishe__info">À la noisette</div>
+                        </div>
                         <div class="dishe__price"><strong>23€</strong></div> 
                     </div>
                 </div>
@@ -112,7 +133,7 @@
         </form>
     </main>
 
-    <footer>
+    <footer class="footer">
         <div class="footer__name">ohmyfood</div>
 
         <ul>

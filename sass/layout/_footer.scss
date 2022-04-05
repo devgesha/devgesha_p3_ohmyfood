@@ -1,5 +1,17 @@
-footer{
+.footer{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: $colour-footer;
+    &__name{
+        margin-left: 10%;
+    }
+    ul{list-style-type: none;}
+    li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 25px;
+        i{padding-right: 4px;}
+        
+    }
 }

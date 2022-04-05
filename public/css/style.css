@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+body a {
+  color: #000;
+}
+
+.fonction__number {
+  font-weight: 900;
+  font-size: 10px;
+}
+
+.description h1 {
+  font-size: 25px;
+}
+
+.rest__name {
+  font-family: "Shrikhand";
+  font-size: 15px;
+}
+
+footer {
+  color: #fff;
+}
+footer .footer__name {
+  font-family: "Shrikhand";
+  font-size: 20px;
+}
+footer a {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px #cfcfcf;
+  position: relative;
+}
+.header__logo img {
+  height: 30px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+}
+.footer__name {
+  margin-left: 10%;
+}
+.footer ul {
+  list-style-type: none;
+}
+.footer li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+}
+.footer li i {
+  padding-right: 4px;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  filter: brightness(91%);
+  background-color: #f6f6f6;
+  padding: 10px;
+}
+.location .fa-location-dot {
+  margin-right: 4px;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 100%;
+  padding: 10%;
+  background-color: #f6f6f6;
+}
+
+.fonction {
+  display: flex;
+  flex-direction: column;
+  padding: 5% 10%;
+  text-align: center;
+}
+.fonction__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.fonction__item {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  background-color: #f6f6f6;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  align-items: center;
+  padding: 20px;
+}
+.fonction__item i {
+  margin-right: 10px;
+}
+
+.fonction__number {
+  display: block;
+  border-radius: 100%;
+  padding: 8px 10px;
+  background-color: #9356DC;
+  color: #fff;
+  margin-left: -30px;
+  margin-right: 10%;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  width: 100%;
+  justify-content: space-around;
+}
+.restaurants__title {
+  display: flex;
+  margin-left: 10%;
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.restaurant__card {
+  display: block;
+  width: 80%;
+  height: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 10px 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.restaurant__card__photo {
+  display: inline-block;
+  position: relative;
+  height: 75%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px 10px 0px 0px;
+}
+.restaurant__card img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translate(0px);
+  object-fit: cover;
+}
+.restaurant__card__body {
+  display: flex;
+  flex-direction: row;
+  height: 25%;
+}
+.restaurant__card__name {
+  display: block;
+  width: 70%;
+  line-height: 6px;
+  padding-left: 6px;
+}
+.restaurant__card__heart {
+  display: inline-block;
+  width: 30%;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 5%;
+}
+.restaurant__card--etiquette {
+  display: block;
+  position: absolute;
+  border-radius: 3px;
+  padding: 8px 10px;
+  background-color: #99E2D0;
+  top: 25px;
+  right: 20px;
+  /* color: $colour-tertiairy;*/
+}
+
+.rest__home {
+  position: relative;
+  background-color: #f6f6f6;
+}
+
+.rest__name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  position: absolute;
+  width: 100%;
+  border-radius: 40px;
+  background-color: #f6f6f6;
+  margin-top: -35px;
+}
+.rest__name i {
+  margin-top: 30px;
+}
+
+.rest__photo {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+.rest__photo img {
+  width: 100%;
+  height: 100%;
+  transform: translate(0px);
+  object-fit: cover;
+}
+
+.rest__main {
+  display: flex;
+  margin-top: 10px;
+  padding-top: 50px;
+  padding-left: 5%;
+  background-color: #f6f6f6;
+}
+.rest__main h2 {
+  margin-left: 10px;
+}
+
+.rest__menu {
+  width: 100%;
+}
+
+.dishe {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: #fff;
+}
+.dishe__name {
+  width: 80%;
+}
+.dishe__name h3 {
+  margin-block-end: 0, 5em;
+  margin-block-start: 0, 5em;
+}
+.dishe__price {
+  display: block;
+  text-align: end;
+  width: 20%;
+  padding: 10px;
+  margin-top: 15px;
+  padding-left: 5px;
+}
+
+/*# sourceMappingURL=style.css.map */
