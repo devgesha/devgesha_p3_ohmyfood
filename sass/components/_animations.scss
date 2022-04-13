@@ -1,0 +1,9 @@
+
+.description__btn {
+    &:hover{
+        background: linear-gradient(#ea8fde, #b977e8);
+        /* transform: scale(1.15); */
+        transition: transform 1000ms;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
+}

@@ -5,3 +5,11 @@ $colour-white: #fff;
 $colour-black: #000;
 $colour-grey: #f6f6f6;
 $colour-footer: #353535;
+
+$breakpoints: (
+    'mobile': 576px,
+    'tablette': 768px,
+    'desktop': 992px,
+);
+
+

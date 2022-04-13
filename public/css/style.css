@@ -25,7 +25,6 @@ body a {
 
 .rest__name {
   font-family: "Shrikhand";
-  font-size: 15px;
 }
 
 footer {
@@ -41,6 +40,25 @@ footer a {
 
 a {
   text-decoration: none;
+}
+
+.description__btn {
+  color: #fff;
+  border: #FF79DA;
+  background: linear-gradient(#e972da, #a65cdc);
+  border-radius: 3.2em;
+  width: 15em;
+  padding: 1em;
+  margin: 1.2em;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.description__btn:hover {
+  background: linear-gradient(#ea8fde, #b977e8);
+  /* transform: scale(1.15); */
+  transition: transform 1000ms;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
 .header {
@@ -59,12 +77,15 @@ a {
   display: flex;
   flex-direction: column;
   background-color: #353535;
+  padding-top: 15px;
+  padding-left: 25px;
 }
 .footer__name {
-  margin-left: 10%;
+  display: block;
 }
 .footer ul {
   list-style-type: none;
+  padding: 0px;
 }
 .footer li {
   display: flex;
@@ -82,58 +103,105 @@ a {
   width: 100%;
   filter: brightness(91%);
   background-color: #f6f6f6;
-  padding: 10px;
+  padding: 0.6em;
 }
 .location .fa-location-dot {
-  margin-right: 4px;
+  margin-right: 0.3em;
 }
 
 .description {
   display: flex;
   flex-direction: column;
   text-align: center;
+  align-items: center;
   width: 100%;
-  padding: 10%;
+  padding: 5% 5% 0% 5%;
   background-color: #f6f6f6;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .description {
+    padding: 1% 1% 0% 1%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .description {
+    padding: 1% 1% 0% 1%;
+  }
 }
 
 .fonction {
   display: flex;
   flex-direction: column;
   padding: 5% 10%;
+  width: 100%;
   text-align: center;
+  background-color: #fff;
 }
 .fonction__items {
   display: flex;
-  flex-direction: column;
-  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  .fonction__items {
+    flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonction__items {
+    justify-content: space-between;
+  }
 }
 
 .fonction__item {
   display: flex;
   flex-direction: row;
-  margin: 10px;
+  margin: 0.6em;
   background-color: #f6f6f6;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
+  border-radius: 1em;
   align-items: center;
-  padding: 20px;
+  padding: 1.2em;
+  font-weight: 900;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .fonction__item {
+    width: 30%;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 992px) {
+  .fonction__item {
+    width: 30%;
+    flex-direction: row;
+  }
 }
 .fonction__item i {
-  margin-right: 10px;
+  margin-right: 0.6em;
+  color: #f6f6f6;
+  filter: brightness(50%);
+}
+.fonction__item:hover {
+  background: #ffdff6;
+}
+.fonction__item:hover i {
+  color: #9356DC;
+  filter: brightness(1);
 }
 
 .fonction__number {
   display: block;
   border-radius: 100%;
-  padding: 8px 10px;
+  padding: 0.7em 1em;
   background-color: #9356DC;
   color: #fff;
-  margin-left: -30px;
+  margin-left: -2.7em;
   margin-right: 10%;
 }
 
 .restaurants {
+  display: flex;
+  flex-direction: column;
   background-color: #f6f6f6;
   width: 100%;
   justify-content: space-around;
@@ -147,15 +215,21 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 1.2em;
+}
+@media screen and (min-width: 992px) {
+  .restaurants__cards {
+    flex-direction: row;
+  }
 }
 
 .restaurant__card {
   display: block;
   width: 80%;
-  height: 250px;
+  height: 16em;
   background-color: #fff;
-  border-radius: 10px;
-  margin: 10px 10px;
+  border-radius: 0.6em;
+  margin: 0.6em 0.6em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .restaurant__card__photo {
@@ -164,13 +238,13 @@ a {
   height: 75%;
   width: 100%;
   overflow: hidden;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 0.6em 0.6em 0em 0em;
 }
 .restaurant__card img {
   width: 100%;
   height: 100%;
   position: relative;
-  transform: translate(0px);
+  transform: translate(0em);
   object-fit: cover;
 }
 .restaurant__card__body {
@@ -181,25 +255,44 @@ a {
 .restaurant__card__name {
   display: block;
   width: 70%;
-  line-height: 6px;
-  padding-left: 6px;
+  line-height: 0.4em;
+  padding: 0.9em;
+}
+@media screen and (min-width: 992px) {
+  .restaurant__card__name {
+    line-height: 0.6em;
+    padding: 0.4em;
+  }
 }
 .restaurant__card__heart {
   display: inline-block;
   width: 30%;
-  font-size: 20px;
+  font-size: 1.5em;
   text-align: center;
-  padding-top: 5%;
+  padding-top: 2%;
 }
 .restaurant__card--etiquette {
   display: block;
   position: absolute;
   border-radius: 3px;
-  padding: 8px 10px;
+  padding: 0.5em 0.6em;
   background-color: #99E2D0;
-  top: 25px;
-  right: 20px;
-  /* color: $colour-tertiairy;*/
+  top: 1.5em;
+  right: 1.2em;
+  color: #278870;
+  font-weight: bolder;
+}
+
+header {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+header i {
+  position: absolute;
+  left: 2.5em;
+  top: 1em;
+  font-size: 1.3em;
 }
 
 .rest__home {
@@ -213,65 +306,154 @@ a {
   justify-content: space-around;
   position: absolute;
   width: 100%;
-  border-radius: 40px;
+  border-radius: 2.5em;
   background-color: #f6f6f6;
-  margin-top: -35px;
+  margin-top: -2.2em;
 }
 .rest__name i {
-  margin-top: 30px;
+  font-size: 1.5em;
+  margin-top: 1em;
 }
 
 .rest__photo {
   display: inline-block;
   position: relative;
   width: 100%;
-  height: 350px;
+  height: 21.8em;
 }
 .rest__photo img {
   width: 100%;
   height: 100%;
-  transform: translate(0px);
+  transform: translate(0em);
   object-fit: cover;
 }
 
 .rest__main {
   display: flex;
-  margin-top: 10px;
-  padding-top: 50px;
-  padding-left: 5%;
-  background-color: #f6f6f6;
+  flex-direction: column;
+  justify-items: center;
+  margin-top: 0.6em;
+  padding-top: 3em;
+  width: 100%;
 }
 .rest__main h2 {
-  margin-left: 10px;
+  margin-left: 0.6em;
+  color: #f6f6f6;
+  filter: brightness(60%);
+  margin-block-end: 0.2em;
 }
 
 .rest__menu {
+  display: inline-block;
+  flex-direction: column;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 992px) {
+  .rest__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 576px) {
+  .rest__menu {
+    flex-direction: column;
+  }
+}
+.rest__menu .trait {
+  border-bottom: 0.3em solid #99E2D0;
+  width: 3em;
+  margin-left: 0.7em;
+}
+
+.btn {
+  text-align: center;
+}
+
+.btn__order {
+  color: #fff;
+  border: #FF79DA;
+  background: linear-gradient(#e972da, #a65cdc);
+  border-radius: 3.2em;
+  width: 15em;
+  padding: 1em;
+  margin: 1.2em;
+  font-size: 1.2em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 .dishe {
   display: flex;
   flex-direction: row;
-  width: 90%;
-  padding: 10px;
-  border-radius: 10px;
-  margin: 10px;
+  padding: 0.6em;
+  border-radius: 0.6em;
+  margin: 0.6em;
   background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .dishe {
+    display: inline-flex;
+    width: 80%;
+  }
+}
+@media screen and (min-width: 992px) {
+  .dishe {
+    width: 20em;
+  }
 }
 .dishe__name {
+  display: block;
   width: 80%;
 }
-.dishe__name h3 {
-  margin-block-end: 0, 5em;
-  margin-block-start: 0, 5em;
-}
 .dishe__price {
-  display: block;
-  text-align: end;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
   width: 20%;
-  padding: 10px;
-  margin-top: 15px;
-  padding-left: 5px;
+}
+.dishe__info {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+main {
+  background-color: #f6f6f6;
+}
+
+h3 {
+  margin: 0;
+}
+
+.rest__menu__section {
+  display: flex;
+  padding: 1em;
+}
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .rest__menu__section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 576px) {
+  .rest__menu__section {
+    flex-direction: column;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 992px) {
+  .rest__menu__section {
+    flex-direction: column;
+  }
+}
+
+.section__titre {
+  width: 15em;
+  justify-content: left;
 }
 
 /*# sourceMappingURL=style.css.map */
