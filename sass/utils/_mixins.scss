@@ -12,7 +12,11 @@
     margin: 1.2em;
     font-size: 1.2em;
     @include shadow;
-    
+    &:hover{
+        background: linear-gradient(#ea8fde, #b977e8);
+        transition: transform 1000ms;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    }
 }
  
 @mixin tablette {

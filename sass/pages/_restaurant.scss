@@ -24,8 +24,8 @@ header{
     background-color: $colour-grey;
     margin-top: -2.2em;
     i {
-        font-size: 1.5em;
-        margin-top: 1em;
+        font-size: 1.2em;
+        
     }
 }
 
@@ -49,12 +49,6 @@ header{
     margin-top: 0.6em;
     padding-top: 3em;
     width: 100%;
-    h2 {
-        margin-left: 0.6em;
-        color: $colour-grey;
-        filter: brightness(60%);
-        margin-block-end: 0.2em;
-    }
 }
 
 .rest__menu {
@@ -70,11 +64,13 @@ header{
         align-items: flex-start
     }
     @include mobile;
+    /*
     .trait{
         border-bottom: 0.3em solid $colour-tertiairy;
         width: 3em;
         margin-left: 0.7em;
     }
+    */
 }
 
 .btn {
@@ -82,16 +78,49 @@ header{
 }
 
 .btn__order {
-
     @include btn;
-
 }
 
+.rest__menu__section{
+    display: flex;
+    padding: 1em;
+    .section__titre {
+        width: 30%;
+        justify-content: left;
+        padding-left: .7em;
+        color: #848484;
+    }
+    h2{margin-block-end: 0;}
+    .section__titre::after{
+        content: '';
+        display: block;
+        width: 2.7rem;
+        height: 3px;
+        background: $colour-tertiairy;
+        margin-top: .1rem;
+    }
+    @include tablette {
+        display: flex;
+        flex-direction: row;
+    }
+    @include mobile {
+        flex-direction: column;
+    }
+    @include desktop {
+        flex-direction: column;
+        width: 33%;
+    }
+} 
+
+.dishes {
+    @include tablette {
+        width: 70%;
+    }
+}
 
 .dishe{
     display: flex;
     flex-direction: row;
-    padding: 0.6em;
     border-radius: 0.6em;
     margin: 0.6em;
     background-color: $colour-white; 
@@ -101,17 +130,25 @@ header{
         width: 80%;
     }
     @include desktop {
-        width: 20em;    
+        width: 100%;    
     }
     &__name {
         display: block;
         width: 80%;
+        padding: 0.6em;
+        h3 {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
     }
     &__price{
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
         width: 20%;
+        padding: 0.6em;
     }
     &__info{
         white-space: nowrap;
@@ -128,22 +165,29 @@ h3{
     margin: 0;
 }
 
-.rest__menu__section{
-    display: flex;
-    padding: 1em;
-    @include tablette {
-        display: flex;
-        flex-direction: row;
-    }
-    @include mobile {
-        flex-direction: column;
-    }
-    @include desktop {
-        flex-direction: column;
-    }
-} 
 
-.section__titre {
-    width: 15em;
-    justify-content: left;
+
+
+
+
+/* à supprimer une fois términé 
+h2{
+    width: 2.5rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: #848484;
+    font-weight: normal;
+    border-bottom: 0.2rem solid $colour-tertiairy;
+    &::after{
+        content: '';
+        display: block;
+        width: 2.7rem;
+        height: 3px;
+        background: $colour-tertiairy;
+        margin-top: .3rem;
+    }
+    
 }
+*/
+

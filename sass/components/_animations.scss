@@ -1,9 +1,71 @@
+/* Bouton page d'acceuil et bouton "commander" sur la page de restaurant */
 
-.description__btn {
-    &:hover{
-        background: linear-gradient(#ea8fde, #b977e8);
-        /* transform: scale(1.15); */
-        transition: transform 1000ms;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+/* Checkbox qui se trouve sur toutes les plats des pages des retaurants */
+
+.checkbox {
+    display: flex;
+    height: 4em;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+    background: $colour-tertiairy;
+    border-top-right-radius: 0.6em;
+    border-bottom-right-radius: 0.6em;
+    i {
+        background-color: $colour-tertiairy;
+        color: $colour-white;
     }
 }
+
+
+
+/* test animation coeur
+
+.restaurant__card__heart {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+}
+.restaurant__card__heart::before {
+    content: "";
+    position: absolute;
+    color: $colour-secondary;
+    top: 20px;
+    left: 0;
+    z-index: -1;
+    transition: all .5s;
+}
+.restaurant__card__heart:hover::before {
+    top: 0px;
+}
+*/
+/* Remplisage du coeur pour mettre dans les favorits*/
+.fa-heart {
+    -webkit-text-stroke-width: .1rem;
+    -webkit-text-stroke-color: black;
+}
+
+.fa-heart::before {
+    content: "";
+    color: $colour-white;
+    font-weight: bold;
+    transition: color 1s ease-out;
+}
+.fa-heart:hover::before{
+    color: #BA55D3;
+    cursor: pointer;
+    -webkit-text-stroke-color: #BA55D3;
+}
+
+/* Loading Spinner : couverture total de la page d'acceuil, durée : entre 1 et 3 sécondes */
+
+.loading {
+    z-index: -1;
+}
+
+.loading__spiner {
+    z-index: 0;
+}
+
