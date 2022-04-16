@@ -45,6 +45,7 @@
 .fa-heart {
     -webkit-text-stroke-width: .1rem;
     -webkit-text-stroke-color: black;
+    border: none;
 }
 
 .fa-heart::before {
@@ -62,7 +63,7 @@
 /* Loading Spinner : couverture total de la page d'acceuil, durée : entre 1 et 3 sécondes */
 
 
-
+/* Fonctionne!!!! deactivée pour le moment
 @keyframes spinner {
     0% {
       transform: translate3d(-50%, -50%, 0) rotate(0deg);
@@ -113,10 +114,30 @@
     z-index: 1;
     animation: loading 3000ms 3000ms both;
 }
+*/
 
 
 
 
+/* Animation: apparaition du ménu */
 
 
+@keyframes transition {
+    0%   { margin-left: -70px;opacity:0; }
+    100% { margin-left: 0;opacity:1; }
+}
 
+.section1 {
+    opacity:0;
+    animation: transition 0.5s ease-in-out 1s forwards;
+}
+    
+.section2 {
+    opacity:0;
+    animation: transition 1s ease-in-out 1.5s forwards;
+}
+
+.section3 {
+    opacity:0;
+    animation: transition 1.5s ease-in-out 2s forwards;
+}

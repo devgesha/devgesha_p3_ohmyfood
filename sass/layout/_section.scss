@@ -160,6 +160,9 @@
         font-size: 1.2em;
         text-align: center;
         padding-top: 1.2em;
+        input {
+            display: none;
+        }
     }
     &--etiquette {
         display: block;
