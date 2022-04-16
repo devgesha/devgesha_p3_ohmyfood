@@ -118,12 +118,52 @@ a {
 }
 
 /* Loading Spinner : couverture total de la page d'acceuil, durée : entre 1 et 3 sécondes */
-.loading {
-  z-index: -1;
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+.spinner::before {
+  animation: 1000ms linear 3 spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #99E2D0;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+  z-index: 0;
 }
 
-.loading__spiner {
-  z-index: 0;
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position: -20%;
+  z-index: 1;
+  animation: loading 3000ms 3000ms both;
 }
 
 .header {
@@ -183,7 +223,7 @@ a {
   padding: 5% 5% 0% 5%;
   background-color: #f6f6f6;
 }
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .description {
     padding: 1% 1% 0% 1%;
   }
@@ -233,7 +273,7 @@ a {
   padding: 1.2em;
   font-weight: 900;
 }
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .fonction__item {
     width: 30%;
     flex-direction: row;
@@ -475,7 +515,7 @@ header i {
   background: #99E2D0;
   margin-top: 0.1rem;
 }
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .rest__menu__section {
     display: flex;
     flex-direction: row;
@@ -494,7 +534,7 @@ header i {
   }
 }
 
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .dishes {
     width: 70%;
   }
@@ -508,7 +548,7 @@ header i {
   background-color: #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-@media screen and (min-width: 576px) and (max-width: 768px) {
+@media screen and (min-width: 576px) and (max-width: 992px) {
   .dishe {
     display: inline-flex;
     width: 80%;
