@@ -1,46 +1,6 @@
 /* Bouton page d'acceuil et bouton "commander" sur la page de restaurant */
 
 
-/* Checkbox qui se trouve sur toutes les plats des pages des retaurants */
-
-.checkbox {
-    display: flex;
-    height: 4em;
-    width: 50px;
-    align-items: center;
-    justify-content: center;
-    background: $colour-tertiairy;
-    border-top-right-radius: 0.6em;
-    border-bottom-right-radius: 0.6em;
-    i {
-        background-color: $colour-tertiairy;
-        color: $colour-white;
-    }
-}
-
-
-
-/* test animation coeur
-
-.restaurant__card__heart {
-    position: relative;
-    z-index: 0;
-    overflow: hidden;
-    display: flex;
-}
-.restaurant__card__heart::before {
-    content: "";
-    position: absolute;
-    color: $colour-secondary;
-    top: 20px;
-    left: 0;
-    z-index: -1;
-    transition: all .5s;
-}
-.restaurant__card__heart:hover::before {
-    top: 0px;
-}
-*/
 /* Remplisage du coeur pour mettre dans les favorits*/
 .fa-heart {
     -webkit-text-stroke-width: .1rem;
@@ -61,9 +21,7 @@
 }
 
 /* Loading Spinner : couverture total de la page d'acceuil, durée : entre 1 et 3 sécondes */
-
-
-/* Fonctionne!!!! deactivée pour le moment
+/*
 @keyframes spinner {
     0% {
       transform: translate3d(-50%, -50%, 0) rotate(0deg);
@@ -114,14 +72,10 @@
     z-index: 1;
     animation: loading 3000ms 3000ms both;
 }
-*/
-
-
-
 
 /* Animation: apparaition du ménu */
 
-
+/*
 @keyframes transition {
     0%   { margin-left: -70px;opacity:0; }
     100% { margin-left: 0;opacity:1; }
@@ -141,3 +95,44 @@
     opacity:0;
     animation: transition 1.5s ease-in-out 2s forwards;
 }
+*/
+
+
+/* Animation checkbox des plats */
+.dishe__name {
+    flex-grow: 1;
+    
+}
+.box {
+    display: flex;
+    height: 4em;
+    width: 0;
+    transition: all 1000ms;
+    background: $colour-tertiairy;
+    .check {
+        background-color: $colour-tertiairy;
+        color: $colour-white;
+        margin: auto;
+        transition: transform 500ms;
+        transform: rotate(360deg);
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+.dishe {
+    display: flex;
+    margin: auto;
+    overflow: hidden;
+    cursor: pointer;
+  
+    &:hover > .box {
+      width: 5em;
+      .check {
+        transform: rotate(0deg);
+      }
+    }
+  }
+
+
