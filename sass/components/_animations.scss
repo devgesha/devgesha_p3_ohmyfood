@@ -1,5 +1,3 @@
-/* Bouton page d'acceuil et bouton "commander" sur la page de restaurant */
-
 
 /* Remplisage du coeur pour mettre dans les favorits*/
 .fa-heart {
@@ -20,7 +18,12 @@
     -webkit-text-stroke-color: #BA55D3;
 }
 
+
 /* Loading Spinner : couverture total de la page d'acceuil, durée : entre 1 et 3 sécondes */
+
+$spinner-dur: 1000ms;
+$spinner-delay: 500ms;
+$loading-delay: $spinner-dur + $spinner-delay*2;
 
 @keyframes spinner {
     0% {
@@ -31,32 +34,32 @@
         opacity: 1;
     }
     100% {
-      transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
       opacity: 0.2;
     }
 }
-  .spinner::before {
-    animation: 1000ms linear 3 spinner;
+  .spinner {
+    animation: spinner 1000ms linear 3 ;
     animation-play-state: inherit;
-    border: solid 5px #cfd0d1;
+    border: solid 10px #759191;
     border-bottom-color: $colour-tertiairy;
     border-radius: 50%;
     content: "";
-    height: 40px;
-    width: 40px;
+    height: 70px;
+    width: 70px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     will-change: transform;
     z-index: 0; 
+    @include shadow;
 }
-
-
 
 @keyframes loading{
     0% {
         opacity: 0;
+        background-color: $colour-tertiairy;
     }
     100% {
         opacity: 1;
@@ -70,15 +73,22 @@
     background-size: cover;
     background-position: -20%;
     z-index: 1;
-    animation: loading 3000ms 3000ms both;
+    animation: loading 400ms $loading-delay both;
+
 }
+
 
 /* Animation: apparaition du ménu */
 
-
 @keyframes transition {
-    0%   { margin-left: -70px;opacity:0; }
-    100% { margin-left: 0;opacity:1; }
+    0%   { 
+        transform: translateY(-70px);
+        opacity:0; 
+    }
+    100% { 
+        transform: translateY(0px);
+        opacity:1; 
+    }
 }
 
 .section1 {

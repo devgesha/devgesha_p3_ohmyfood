@@ -60,7 +60,6 @@ a {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* Bouton page d'acceuil et bouton "commander" sur la page de restaurant */
 /* Remplisage du coeur pour mettre dans les favorits*/
 .fa-heart {
   -webkit-text-stroke-width: 0.1rem;
@@ -95,26 +94,28 @@ a {
     opacity: 0.2;
   }
 }
-.spinner::before {
-  animation: 1000ms linear 3 spinner;
+.spinner {
+  animation: spinner 1000ms linear 3;
   animation-play-state: inherit;
-  border: solid 5px #cfd0d1;
+  border: solid 10px #759191;
   border-bottom-color: #99E2D0;
   border-radius: 50%;
   content: "";
-  height: 40px;
-  width: 40px;
+  height: 70px;
+  width: 70px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
   z-index: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 @keyframes loading {
   0% {
     opacity: 0;
+    background-color: #99E2D0;
   }
   100% {
     opacity: 1;
@@ -127,17 +128,17 @@ a {
   background-size: cover;
   background-position: -20%;
   z-index: 1;
-  animation: loading 3000ms 3000ms both;
+  animation: loading 400ms 2000ms both;
 }
 
 /* Animation: apparaition du ménu */
 @keyframes transition {
   0% {
-    margin-left: -70px;
+    transform: translateY(-70px);
     opacity: 0;
   }
   100% {
-    margin-left: 0;
+    transform: translateY(0px);
     opacity: 1;
   }
 }
@@ -412,9 +413,6 @@ a {
   font-size: 1.2em;
   text-align: center;
   padding-top: 1.2em;
-}
-.restaurant__card__heart input {
-  display: none;
 }
 .restaurant__card--etiquette {
   display: block;
